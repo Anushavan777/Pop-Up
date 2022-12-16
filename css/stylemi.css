@@ -1,0 +1,293 @@
+:root {
+    /* Шрифты */
+    --main-font: roboto, sans-serif;
+    --secondary-font: Raleway, sans-serif;
+
+    /* Цвета шрифтов */
+    --primary-text-color: #757575;
+    --title-text-color: #212121;
+    --accent-color: #2196f3;
+    --primary-white-color: #ffffff;
+    --input-text-color-gray: rgba(255, 255, 255, 0.6);
+    --textarea-color-gray: rgba(117, 117, 117, 0.5);
+
+    /* Цвета заливки */
+    --primary-background: #ffffff;
+    --secondary-background: #f5f4fa;
+    --footer-background: #2f303a;
+    --decore-gray-color: #ececec;
+    --accent-backgrounde: #2196f3;
+    --animation-overlay-color: #f1f3f4; 
+    --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    --pd: 3px; 
+}
+
+/* ========
+ nulling styles and rules 
+ ==== */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a,
+h1,
+h2,
+h3,
+h4,
+ul,
+p,
+b
+ {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 25px;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: "Roboto", snat-serif;
+    color: var(--title-text-color);
+}
+
+/* command */
+
+header {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.container {
+	width: 100%;
+    max-width: 1200px;
+    padding-top: 7px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.list {
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+    color: currentColor;
+    width: 100%;
+    height: 100%;
+    /* ===== */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.link img {
+	margin-bottom: 10px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navigation-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 8px 8px;
+
+}
+
+.navigation-list>.item:not(:last-child) {
+    margin-right: 20px;
+}
+
+
+.wrapper-link {
+    position: relative;
+}
+
+.wrapper-link::after {
+    content: '';
+    position: absolute;
+    /* top: calc( 0px - var(--pd) );
+    left: calc( 0px - var(--pd) ); */
+    /* bottom: calc( 0px - var(--pd) ); */
+    display: block;
+    width: calc( 100% + var(--pd) + var(--pd) );
+    height: calc( 100% + var(--pd) + var(--pd) );
+    background-color: #ffffff;
+    z-index: 1;
+}
+
+.wrapper-link:hover::after {
+    background-color: var(--animation-overlay-color);  
+    border-radius: 12px;
+}
+
+.hover-popup:hover {
+    background-color: rgba(237, 228, 228, 0.705);
+    border-radius: 12px;
+}
+
+.wrapper-link span,
+.wrapper-link img {
+    z-index: 2;
+}
+
+
+
+/* .wrapper-link:focus,
+.wrapper-link:hover {
+    background-color: hsl(206deg 100% 93%);
+    border-radius: 12px;
+} */
+
+
+
+
+
+/* input-popup */
+
+.input-popup {
+    appearance: none;
+    position: absolute;
+}
+
+.input-popup:checked~.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+}
+
+.wrapper {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    width: 300px;
+    /* max-height: 320px; */
+    position: absolute;
+    /* margin-right: 30px; */
+    top: 70px;
+    right: 30px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 8px;
+    box-shadow: 0px 1px 2px 0px rgb(60 64 67 / 30%), 0px 2px 6px 2px rgb(60 64 67 / 15%);
+    overflow-y: overlay;
+    padding: 15px;
+}
+
+
+.wrapper-lits {
+    display: flex;
+    justify-content: space-around;
+    align-content: space-evenly;
+    flex-wrap: wrap;
+    /*width: 300px;
+    height: 250px; */
+    width: 100%;
+    height: auto;
+    padding: 3px;
+}
+
+.wrapper-item {
+    display: flex;
+    justify-content: inherit;
+    align-items: center;
+    width: 70px;
+    height: 56px;
+    margin-bottom: 10px;
+
+}
+
+/* flex-basis: calc((100% - (4 -1) * 30px) / 4)
+flex-basis: calc((100% - 60px) / 3); */
+
+/* ============= */
+
+/*  ========= label for button More =========== */
+
+.input-more,
+.input-popup {
+    appearance: none;
+    position: absolute;
+}
+
+.button-more {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 25px;
+    margin-bottom: 20px;
+    background-color:#f1f3f4;
+    border-radius: 7px;
+    box-shadow: 0px 1px 2px 0px rgb(60 64 67 / 30%), 0px 2px 6px 2px rgb(241 243 244); 
+}
+
+.nav-list-more {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* width: 215px;
+    height: 20px; */
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: -10px;
+    right: 0px;
+    padding: 3px;
+
+}
+
+.item-menu,
+.menu-more {
+    /* width: 55px; */
+    /* height:inherit; */
+}
+
+.kottans {
+    display: none;
+    position: relative;
+    top: 35px;
+}
+
+.input-popup:checked~.wrapper-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: absolute;
+}
+
+.input-more:checked~.nav-list-more {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
