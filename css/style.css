@@ -17,10 +17,10 @@
     --footer-background: #2f303a;
     --decore-gray-color: #ececec;
     --accent-backgrounde: #2196f3;
-    --animation-overlay-color: #f1f3f4; 
+    --animation-overlay-color: #f1f3f4;
     --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    --pd: 3px; 
+    --pd: 3px;
 }
 
 /* ========
@@ -44,11 +44,12 @@ h3,
 h4,
 ul,
 p,
-b
- {
+b {
     margin: 0;
     padding: 0;
 }
+
+
 
 img {
     display: block;
@@ -64,18 +65,29 @@ body {
     color: var(--title-text-color);
 }
 
+/* line */
+
+.line::after {
+    width: 1200px;
+    content: '';
+    background-color: rgba(199, 199, 199, 0.922);
+    height: 1px;
+    display: block;
+}
+
 /* command */
 
+
 header {
-	width: 100%;
-	height: auto;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .container {
-	width: 100%;
+    width: 100%;
     max-width: 1200px;
     padding-top: 7px;
     padding-right: 15px;
@@ -101,7 +113,7 @@ header {
 }
 
 .link img {
-	margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .navigation {
@@ -134,14 +146,14 @@ header {
     left: calc( 0px - var(--pd) ); */
     /* bottom: calc( 0px - var(--pd) ); */
     display: block;
-    width: calc( 100% + var(--pd) + var(--pd) );
-    height: calc( 100% + var(--pd) + var(--pd) );
+    width: calc(100% + var(--pd) + var(--pd));
+    height: calc(100% + var(--pd) + var(--pd));
     background-color: #ffffff;
     z-index: 1;
 }
 
 .wrapper-link:hover::after {
-    background-color: var(--animation-overlay-color);  
+    background-color: var(--animation-overlay-color);
     border-radius: 12px;
 }
 
@@ -244,9 +256,9 @@ flex-basis: calc((100% - 60px) / 3); */
     width: 50px;
     height: 25px;
     margin-bottom: 20px;
-    background-color:#f1f3f4;
+    background-color: #f1f3f4;
     border-radius: 7px;
-    box-shadow: 0px 1px 2px 0px rgb(60 64 67 / 30%), 0px 2px 6px 2px rgb(241 243 244); 
+    box-shadow: 0px 1px 2px 0px rgb(60 64 67 / 30%), 0px 2px 6px 2px rgb(241 243 244);
 }
 
 .nav-list-more {
